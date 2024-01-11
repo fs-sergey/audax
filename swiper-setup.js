@@ -9,6 +9,7 @@ $(document).ready(function () {
       prevEl: ".swiper-prev",
     },
   });
+  //swiper 2
   var mySwiper = new Swiper(".is-slider-controls", {
     direction: "horizontal",
     loop: false,
@@ -25,4 +26,5 @@ $(document).ready(function () {
       clickable: true,
     },
   });
+
 });
