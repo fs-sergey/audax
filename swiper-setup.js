@@ -10,21 +10,22 @@ $(document).ready(function () {
     },
   });
   //swiper 1
-  var mySwiper = new Swiper(".is-slider-controls", {
-    direction: "horizontal",
-    loop: false,
-    slidesPerView: "auto",
-    spaceBetween: 16,
-    wrapperClass: 'swiper-wrapper', // specify your wrapper class here
-    slideClass: 'swiper-slide', // specify your slide class here
-    navigation: {
-      nextEl: ".is-slider-controls .swiper-next",
-      prevEl: ".is-slider-controls .swiper-prev",
-    },
-    pagination: {
-      el: ".is-slider-controls .swiper-pagination",
-      clickable: true,
-    },
-  });
+  $(".is-slider-controls").each(function () {
+    var swiper = new Swiper($(this).find(".swiper-wrapper")[0], {
+        direction: "horizontal",
+        loop: false,
+        slidesPerView: "auto",
+        spaceBetween: 16,
+        navigation: {
+            nextEl: $(this).find(".swiper-button-next")[0],
+            prevEl: $(this).find(".swiper-button-prev")[0],
+        },
+        pagination: {
+            el: $(this).find(".swiper-pagination")[0],
+            clickable: true,
+        },
+        // Add other configurations as needed
+    });
+});
 
 });
