@@ -9,21 +9,22 @@ $(document).ready(function () {
       prevEl: ".swiper-prev",
     },
   });
-    var mySwiper = new Swiper(".is-slider-controls", {
+$(document).ready(function () {
+  var mySwiper = new Swiper(".is-slider-controls", {
     direction: "horizontal",
     loop: false,
     slidesPerView: "auto",
     spaceBetween: 16,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<div class="' + className + '"></div>';
-      }
-    },
+    wrapperClass: 'swiper-wrapper is-slider-main',
     navigation: {
       nextEl: ".swiper-next",
       prevEl: ".swiper-prev",
     },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
   });
+});
+
 });
