@@ -9,7 +9,7 @@ $(document).ready(function () {
       prevEl: ".swiper-prev",
     },
   });
-  //swiper 2
+  //swiper
   var mySwiper = new Swiper(".is-slider-controls", {
     direction: "horizontal",
     loop: false,
