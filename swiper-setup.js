@@ -9,22 +9,20 @@ $(document).ready(function () {
       prevEl: ".swiper-prev",
     },
   });
-$(document).ready(function () {
   var mySwiper = new Swiper(".is-slider-controls", {
     direction: "horizontal",
     loop: false,
     slidesPerView: "auto",
     spaceBetween: 16,
-    wrapperClass: 'swiper-wrapper is-slider-main',
+    wrapperClass: 'swiper-wrapper', // specify your wrapper class here
+    slideClass: 'swiper-slide', // specify your slide class here
     navigation: {
-      nextEl: ".swiper-next",
-      prevEl: ".swiper-prev",
+      nextEl: ".is-slider-controls .swiper-next",
+      prevEl: ".is-slider-controls .swiper-prev",
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".is-slider-controls .swiper-pagination",
       clickable: true,
     },
   });
-});
-
 });
